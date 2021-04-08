@@ -1,0 +1,4 @@
+#!/bin/bash
+
+name=$1
+docker exec -it $name bash -c "echo '$name /home/public' >> /etc/security/chroot.conf && sed -i 's/\/usr\/lib\/openssh\/sftp-server/internal-sftp/g' /etc/ssh/sshd_config && echo 'session    required   pam_chroot.so' >> /etc/pam.d/sshd && service ssh restart"

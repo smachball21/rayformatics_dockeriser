@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+
+name=$1
+
+if [ ! -v $name ]
+then
+    path=/home/docker/mountpoint/
+    pathwithname="$path$name"
+
+    {
+        docker volume create --name=$name
+        chown -hR ubuntu:ubuntu /var/lib/docker/volumes/$name/_data
+    } || {
+      echo 'erreur'
+    }
+else
+    echo "Merci de specifier un nom de volume"
+fi
+
+

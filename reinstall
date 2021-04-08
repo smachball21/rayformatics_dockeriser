@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker_kill
+docker image rm $(docker images -q)
+docker volume rm $(docker volume ls -q)
+docker build /home/docker/. --tag="secureftp"
+python docker_start.py
+ln -s /var/lib/docker/volumes /home/docker/mountpoint

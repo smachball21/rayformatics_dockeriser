@@ -1,0 +1,26 @@
+{
+  "rayformatics": {
+    "username": "rayformatics", 
+    "image": "secureftp", 
+    "email": "nathan.hautevelle@viacesi.fr", 
+    "volume": "rayformatics", 
+    "password": "$6$qH69G49Vgeh11xxz$LMH04iWhgOogEVZAs/wR7bvC2a5lxpHItZXbb7aDIroGOD7WBXGtgJW8vorpR0rnVdWdkawaJqStMmpDB3k5C.", 
+    "port": 2225
+  }, 
+  "kent": {
+    "username": "kent", 
+    "image": "secureftp", 
+    "email": "quentin.arrachart@viacesi.fr", 
+    "volume": "kent", 
+    "password": "$6$nj.pKZXg3ChUppqc$UoKW86WrNpKL2vHHyvrYWuSj4jzhpiDRgPOlKam.8NyMsVqMJrTtp4H/XQSE8h36LFk3dEOAodyUmUsMX1HPk1", 
+    "port": 2224
+  }, 
+  "rayman": {
+    "username": "rayman", 
+    "image": "secureftp", 
+    "email": "webmaster@rayformatics.fr", 
+    "volume": "discordbot", 
+    "password": "$6$q1SSTeH7iQ90UlAN$p.0Pvt.ciUdKY0wdaSYPkEqCujnYcWXP2vPRO2Dl8P8r1ANZ8LUdd4VZYdT6PqdKt93vSYf18OXRJ3gcHkvoZ.", 
+    "port": 2222
+  }
+}

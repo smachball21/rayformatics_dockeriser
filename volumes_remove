@@ -1,0 +1,24 @@
+#!/bin/bash
+
+name=$1
+
+volume_remove() {
+    {
+        # Create volume in custom mountpoint dir
+        rm -rf $1
+        docker volume rm $2
+    } || {
+      echo 'erreur'
+    }
+}
+
+if [ ! -v $name ]
+then
+    path=/home/docker/mountpoint/
+    pathwithname="$path$name"
+    volume_remove $pathwithname $name
+else
+    echo "Merci de specifier un nom de volume"
+fi
+
+
