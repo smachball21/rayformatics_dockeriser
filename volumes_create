@@ -11,7 +11,7 @@ then
 
     {
         docker volume create --name=$name
-        chown -hR ubuntu:ubuntu /var/lib/docker/volumes/$name/_data
+        chown -hR ubuntu:www-data /var/lib/docker/volumes/$name/_data
     } || {
       echo 'erreur'
     }

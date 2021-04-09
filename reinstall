@@ -1,8 +1,16 @@
 #!/bin/bash
 
+# KILL IMAGES & REMOVE IMAGE & VOLUMES
 docker_kill
 docker image rm $(docker images -q)
 docker volume rm $(docker volume ls -q)
-docker build /home/docker/. --tag="secureftp"
+
+# BUILD ALL IMAGE DEFINED (INCREMENTIAL)
+docker build /home/docker/secureftp_base/. --tag="secureftp"
+docker build /home/docker/secureftp_laravem/. --tag="secureftp_laravel"
+
+# START ALL CONTAINER USING LOCAL DB
 python docker_start.py
+
+# CREATE ABSOLUTE LINK
 ln -s /var/lib/docker/volumes /home/docker/mountpoint
