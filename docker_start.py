@@ -25,7 +25,6 @@ con = sqlite3.connect("/home/docker/users/users.db")
 cur = con.cursor()
 
 # Get all datas
-
 if user is 0:
    cur.execute("SELECT * FROM users")
 else:
@@ -48,7 +47,7 @@ for row in rows:
     except subprocess.CalledProcessError as e:
         # Launch all containers
         os.system("bash /home/docker/volumes_create {0}".format(volume))
-        os.system("chown -hR ubuntu:www-data /var/lib/docker/volumes/{0}/_data".format(volume))
+        os.system("chown -hR ubuntu:www-data /var/lib/docker/volumes/{0}".format(volume))
         os.system("chmod 750 /var/lib/docker/volumes/{0}".format(volume))
-        os.system("docker run -p {2}:22 -e SSH_USER={0} -e SSH_PASSWORD='{1}' -v {3}:/home/public/public_html --name={0} -d --restart=always secureftp".format(username, password, port, volume))
+        os.system("docker run -p {2}:22 -e SSH_USER={0} -e SSH_PASSWORD='{1}' -v {3}:/home/public/public_html --name={0} -d {4}".format(username, password, port, volume, image))
         os.system("bash /home/docker/chroot_config {0}".format(username))
