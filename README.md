@@ -90,9 +90,4 @@ python docker_kill
 python docker_kill {USERNAME}
 
 ```
-<<<<<<< HEAD
-
-=======
->>>>>>> 9744d0bbe2dca42674f55d2d61a5555e68362e3c
-
 
