@@ -1,9 +1,22 @@
 #!/bin/bash
 
+echo "-----------------  KILL ALL CONTAINERS -------------------"
 # Kill existing docker
-docker kill portainer
-docker rm portainer
+docker kill $(docker ps -aq)
+docker rm $(docker ps -aq)
 
+echo "-----------------  START PORTAINER CONTAINER -------------------"
 # Run portainer
 docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v rfc_portainer:/data portainer/portainer-ce
+
+# Run SQLServer
+echo "-----------------  START DB CONTAINER -------------------"
+docker-compose -f /home/docker/images/sqlserver/docker-compose.yml up -d
+docker exec -d sqlserver bash -c "chown -hR mysql:mysql /var/lib/mysql && service apache2 restart && service mysql restart"
+
+# Run other Containers
+echo "-----------------  START ALL CLIENTS CONTAINERS -------------------"
+chown www-data:www-data /var/lib/docker/volumes/
+chmod -R 770 /var/lib/docker/volumes/
+python /home/docker/docker_start.py
 
