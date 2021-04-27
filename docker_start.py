@@ -48,6 +48,6 @@ for row in rows:
         # Launch all containers
         os.system("bash /home/docker/volumes_create {0}".format(volume))
         os.system("chown -hR ubuntu:www-data /var/lib/docker/volumes/{0}".format(volume))
-        os.system("chmod 750 /var/lib/docker/volumes/{0}".format(volume))
-        os.system("docker run -p {2}:22 -e SSH_USER={0} -e SSH_PASSWORD='{1}' -v {3}:/home/public/public_html --name={0} -d {4}".format(username, password, port, volume, image))
+        os.system("chmod -R 770 /var/lib/docker/volumes/{0}".format(volume))
+        os.system("docker run -p {2}:22 -e SSH_USER={0} -e SSH_PASSWORD='{1}' -v {3}:/home/public/public_html --link=sqlserver --name={0} -d {4}".format(username, password, port, volume, image))
         os.system("bash /home/docker/chroot_config {0}".format(username))

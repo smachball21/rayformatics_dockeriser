@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+  sqlserver:
+    image: sqlserver:latest
+    network_mode: bridge
+    restart: always
+    container_name: sqlserver
+    ports:
+      - "8080:80"
+    volumes:
+      - sqlserver:/var/lib/mysql
+      - sqlserveretc:/etc/mysql
+      - phpmyadmin:/usr/share/phpmyadmin
+      - phpmyadmin:/etc/phpmyadmin
+      - apache2sql:/etc/apache2
+volumes:
+    sqlserver:
+      external: true
+      name: sqlserver
+    sqlserveretc:
+      external: true
+      name: sqlserveretc
+    phpmyadmin:
+      external: true
+      name: phpmyadmin
+    apache2sql:
+      external: true
+      name: apache2sql
+networks:
+    bridge:
+      external:
+        name: bridge

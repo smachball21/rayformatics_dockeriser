@@ -1,5 +1,4 @@
 # Import Required modules
-import json
 import os
 import sys
 import random
@@ -128,4 +127,4 @@ os.system("python /home/docker/docker_start.py -u {0}".format(username))
 print (Fore.CYAN + Style.BRIGHT +"Sending email to client ..."+ Style.RESET_ALL)
 os.system(command)
 
-print password
+#print password

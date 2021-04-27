@@ -4,3 +4,101 @@ rayformatics
 rayman's container already started !
 kent's container already started !
 rayformatics's container already started !
+discordbot
+kent
+rayformatics
+nationv
+cube2
+discordbot
+kent
+rayformatics
+nationv
+cube2
+Stop Portainer container
+portainer
+Stop sqlserver container
+sqlserver
+Start Portainer container
+42e347aa1ce33fa01c82352595c92c5b64868128d9541e048a1d10a6cbf28aa3
+Start Sqlserver container
+Stop All containers
+6e3804805a4a
+2a732cdd00a3
+21214a96be4a
+78c0ddb37d2e
+9839436215eb
+f07af450fad2
+4c0294f01976
+8a6ec4326ded
+6e3804805a4a
+2a732cdd00a3
+Start Portainer container
+Start Sqlserver container
+Stop All containers
+b4ac8bb2647a
+574021f8dc5f
+Start Portainer container
+Start Sqlserver container
+-----------------  KILL ALL CONTAINERS -------------------
+03b69371150f
+a13a773b51f2
+-----------------  START PORTAINER CONTAINER -------------------
+-----------------  START DB CONTAINER -------------------
+-----------------  START ALL CLIENTS CONTAINERS -------------------
+rayman's container already started !
+kent's container already started !
+rayformatics's container already started !
+nationv's container already started !
+cube2's container already started !
+cube1's container already started !
+-----------------  KILL ALL CONTAINERS -------------------
+41cc43ffdc98
+eeae6c20683b
+0125594ff759
+d45da494e837
+757f1d977048
+bf790ac1f4f5
+9da36b1ba186
+614a230203f8
+41cc43ffdc98
+eeae6c20683b
+-----------------  START PORTAINER CONTAINER -------------------
+-----------------  START DB CONTAINER -------------------
+-----------------  START ALL CLIENTS CONTAINERS -------------------
+rayman's container already started !
+kent's container already started !
+rayformatics's container already started !
+nationv's container already started !
+cube2's container already started !
+cube1's container already started !
+-----------------  KILL ALL CONTAINERS -------------------
+e56e472bf1cd
+6ac8348c59ed
+-----------------  START PORTAINER CONTAINER -------------------
+a372a7427d01d55b2311ed63426d9da88d2073118f3b5d0a1f9f630d05e1be7d
+-----------------  START DB CONTAINER -------------------
+-----------------  START ALL CLIENTS CONTAINERS -------------------
+rayman's container already started !
+kent's container already started !
+rayformatics's container already started !
+nationv's container already started !
+cube2's container already started !
+cube1's container already started !
+-----------------  KILL ALL CONTAINERS -------------------
+5d306e18ae12
+a372a7427d01
+-----------------  START PORTAINER CONTAINER -------------------
+695a1b45e5241529d6132e041db72298a50fd0aef185136b32267799d716528c
+-----------------  START DB CONTAINER -------------------
+-----------------  START ALL CLIENTS CONTAINERS -------------------
+discordbot
+0839800da88832da3436ea35bb0f3cc95b6b88b46e983ca7ee99eaa79d9b14ee
+rayformatics
+78554bfb858840f01db9e4160e925476cbce86f80b9ee3c5e6deea91a7198e19
+nationv
+7e84f36598442adcc7b610363eb9777711d55818517bcca465a094bd5dcaf715
+cube2
+758cddbefb399b28cc9256269046da586f9b3a06e0103bf6f05332883279d1bd
+cube1
+07e4c8f26786b1f3ded9cade865d73c63e8194765055592b5585ab0e7fd42982
+kent's container already started !
